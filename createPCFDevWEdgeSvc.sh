@@ -9,11 +9,11 @@ cf delete edgesvcbp
 cf delete quotesvc
 
 echo ""
-echo "cf push quotesvc -o hecklerm/quotesvc -m 1G"
+echo "\033[33mcf push quotesvc -o hecklerm/quotesvc -m 1G\033[0m"
 cf push quotesvc -o hecklerm/quotesvc -m 1G
 read -p "Press ENTER to continue..."
 echo ""
-echo "cf push edgesvc -o hecklerm/edgesvc -m 1G"
+echo "\033[33mcf push edgesvc -o hecklerm/edgesvc -m 1G\033[0m"
 cf push edgesvc -o hecklerm/edgesvc -m 1G
 read -p "Press ENTER to continue..."
 echo ""
@@ -21,39 +21,39 @@ echo ""
 # curl http://edgesvc.local.pcfdev.io/quote
 # read -p "Press ENTER to continue..."
 # echo ""
-echo "cf set-env edgesvc QUOTESVC_URI http://quotesvc.local.pcfdev.io"
+echo "\033[33mcf set-env edgesvc QUOTESVC_URI http://quotesvc.local.pcfdev.io\033[0m"
 cf set-env edgesvc QUOTESVC_URI http://quotesvc.local.pcfdev.io
 read -p "Press ENTER to continue..."
 echo ""
-echo "cf restart edgesvc"
+echo "\033[33mcf restart edgesvc\033[0m"
 cf restart edgesvc
 read -p "Press ENTER to continue..."
 echo ""
-echo "curl http://edgesvc.local.pcfdev.io/quote"
+echo "\033[33mcurl http://edgesvc.local.pcfdev.io/quote\033[0m"
 curl http://edgesvc.local.pcfdev.io/quote
 read -p "Press ENTER to continue..."
 echo ""
-echo "cf scale edgesvc -i 2"
+echo "\033[33mcf scale edgesvc -i 2\033[0m"
 cf scale edgesvc -i 2
 read -p "Press ENTER to continue..."
 echo ""
-echo "cf app edgesvc"
+echo "\033[33mcf app edgesvc\033[0m"
 cf app edgesvc
 echo ""
 read -p "Run cf logs edgesvc from another tab & press ENTER to continue..."
 echo ""
-echo "curl http://edgesvc.local.pcfdev.io/quote x 4"
+echo "\033[33mcurl http://edgesvc.local.pcfdev.io/quote x 4\033[0m"
 curl http://edgesvc.local.pcfdev.io/quote
 curl http://edgesvc.local.pcfdev.io/quote
 curl http://edgesvc.local.pcfdev.io/quote
 curl http://edgesvc.local.pcfdev.io/quote
 read -p "Press ENTER to continue..."
 echo ""
-echo "cf stop edgesvc"
+echo "\033[33mcf stop edgesvc\033[0m"
 cf stop edgesvc
-echo "cf stop quotesvc"
+echo "\033[33mcf stop quotesvc\033[0m"
 cf stop quotesvc
 echo ""
 # echo "Deploy as buildpack, then..."
-echo "cf dev suspend"
+echo "\033[33mcf dev suspend\033[0m"
 cf dev suspend
