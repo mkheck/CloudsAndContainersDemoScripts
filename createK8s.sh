@@ -8,19 +8,19 @@ read -p "Press ENTER to continue..."
 echo ""
 # echo "kubectl run quotesvc --image=hecklerm/quotesvc --port=8088"
 # kubectl run quotesvc --image=hecklerm/quotesvc --port=8088
-echo "kubectl create -f ./quotesvc.yaml"
+echo "\033[33mkubectl create -f ./quotesvc.yaml\033[0m"
 kubectl create -f ./quotesvc.yaml
 read -p "Press ENTER to continue..."
 echo ""
-echo "kubectl expose deployment quotesvc --type=NodePort"
+echo "\033[33mkubectl expose deployment quotesvc --type=NodePort\033[0m"
 kubectl expose deployment quotesvc --type=NodePort
 read -p "Press ENTER to continue..."
 echo ""
-echo "kubectl get pod"
+echo "\033[33mkubectl get pod"
 kubectl get pod
 read -p "Press ENTER to continue..."
 echo ""
-echo "curl \$(minikube service quotesvc --url)/random"
+echo "\033[33mcurl \$(minikube service quotesvc --url)/random\033[0m"
 curl $(minikube service quotesvc --url)/random
 read -p "Press ENTER to continue..."
 # echo ""
@@ -28,21 +28,21 @@ read -p "Press ENTER to continue..."
 # kubectl get pod
 # read -p "Press ENTER to continue..."
 echo ""
-echo "kubectl scale --replicas=2 deployment/quotesvc"
+echo "\033[33mkubectl scale --replicas=2 deployment/quotesvc\033[0m"
 kubectl scale --replicas=2 deployment/quotesvc
 kubectl get pod
 read -p "Press ENTER to continue..."
 echo ""
-echo "Run kubectl delete pod/<pod>"
+echo "\033[33mRun kubectl delete pod/<pod>\033[0m"
 read -p "Press ENTER after deleting pod to continue..."
 echo ""
-echo "kubectl get pod"
+echo "\033[33mkubectl get pod\033[0m"
 kubectl get pod
 read -p "Press ENTER to continue..."
 echo ""
-echo "kubectl delete deployment,service quotesvc"
+echo "\033[33mkubectl delete deployment,service quotesvc\033[0m"
 kubectl delete deployment,service quotesvc
 read -p "Press ENTER to shut down K8s..."
 echo ""
-echo "minikube stop"
+echo "\033[33mminikube stop\033[0m"
 minikube stop
