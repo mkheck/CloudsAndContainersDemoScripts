@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: quotesvc
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: quotesvc
+    spec:
+      containers:
+      - name: quotesvc
+        image: hecklerm/quotesvc
+        ports:
+        - containerPort: 8088
