@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: quotesvc
-        image: hecklerm/quotesvc
+        image: jmreif/quotesvc
         ports:
         - containerPort: 8088

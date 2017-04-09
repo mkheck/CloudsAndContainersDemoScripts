@@ -6,8 +6,8 @@ minikube start
 
 read -p "Press ENTER to continue..."
 echo ""
-# echo "kubectl run quotesvc --image=hecklerm/quotesvc --port=8088"
-# kubectl run quotesvc --image=hecklerm/quotesvc --port=8088
+# echo "kubectl run quotesvc --image=jmreif/quotesvc --port=8088"
+# kubectl run quotesvc --image=jmreif/quotesvc --port=8088
 echo "\033[33mkubectl create -f ./quotesvc.yaml\033[0m"
 kubectl create -f ./quotesvc.yaml
 read -p "Press ENTER to continue..."
