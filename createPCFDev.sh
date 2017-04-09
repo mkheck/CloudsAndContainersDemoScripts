@@ -9,8 +9,8 @@ cf delete edgesvcbp
 cf delete quotesvc
 
 echo ""
-echo "\033[33mcf push quotesvc -o hecklerm/quotesvc -m 1G\033[0m"
-cf push quotesvc -o hecklerm/quotesvc -m 1G
+echo "\033[33mcf push quotesvc -o jmreif/quotesvc -m 1G\033[0m"
+cf push quotesvc -o jmreif/quotesvc -m 1G
 read -p "Press ENTER to continue..."
 echo ""
 echo "\033[33mcurl http://quotesvc.local.pcfdev.io/random\033[0m"
