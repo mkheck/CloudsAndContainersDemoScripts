@@ -1,9 +1,6 @@
 #!/bin/sh
 clear
 
-# Export MINIKUBE_HOME env var
-export MINIKUBE_HOME=/Volumes/750G/VBox/
-
 # Start K8s local cluster
 minikube start
 
