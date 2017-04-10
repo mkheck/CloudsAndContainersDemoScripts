@@ -1,6 +1,9 @@
 #!/bin/sh
 clear
 
+# Export MINIKUBE_HOME env var
+export MINIKUBE_HOME=/Volumes/750G/VBox/
+
 # Start K8s local cluster
 minikube start
 
@@ -16,7 +19,7 @@ echo "\033[33mkubectl expose deployment quotesvc --type=NodePort\033[0m"
 kubectl expose deployment quotesvc --type=NodePort
 read -p "Press ENTER to continue..."
 echo ""
-echo "\033[33mkubectl get pod"
+echo "\033[33mkubectl get pod\033[0m"
 kubectl get pod
 read -p "Press ENTER to continue..."
 echo ""
