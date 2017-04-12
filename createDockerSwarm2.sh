@@ -10,7 +10,7 @@ echo "\033[33mdocker-machine ssh mgr1 docker node ls\033[0m"
 docker-machine ssh mgr1 docker node ls
 read -p "Press ENTER to continue..."
 echo ""
-echo "\033[33mdocker service create --replicas 1 -p 8088:8088 --name quotesvc /quotesvc\033[0m"
+echo "\033[33mdocker service create --replicas 1 -p 8088:8088 --name quotesvc jmreif/quotesvc\033[0m"
 docker-machine ssh mgr1 docker service create --replicas 1 -p 8088:8088 --name quotesvc jmreif/quotesvc
 echo ""
 echo "\033[33mdocker-machine ssh mgr1 docker service ls\033[0m"
