@@ -20,8 +20,8 @@ echo "\033[33mkubectl get pod\033[0m"
 kubectl get pod
 read -p "Press ENTER to continue..."
 echo ""
-echo "\033[33mcurl \$(minikube service quotesvc --url)/random\033[0m"
-curl $(minikube service quotesvc --url)/random
+echo "\033[33mhttp \$(minikube service quotesvc --url)/random\033[0m"
+http $(minikube service quotesvc --url)/random
 read -p "Press ENTER to continue..."
 # echo ""
 # echo "kubectl get pod"

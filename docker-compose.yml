@@ -1,34 +1,32 @@
 version: "3"
 services:
   quotesvc:
-    image: hecklerm/quotesvc
+    image: jmreif/quotesvc
     ports:
-      - 8080:8080
-    networks:
-      - frontend
+      - 8088:8088
+    # networks:
+    #   - dockerdemo
     deploy:
-      replicas: 2
+      replicas: 1
       update_config:
         parallelism: 2
         delay: 10s
       restart_policy:
         condition: on-failure
   edgesvc:
-    # build: .
-    image: hecklerm/edgesvc
+    image: jmreif/edgesvc
     ports:
       - "8086:8086"
     depends_on:
       - quotesvc
-    networks:
-      - backend
+    # networks:
+    #   - dockerdemo
     deploy:
-      replicas: 2
+      replicas: 1
       update_config:
         parallelism: 2
         delay: 10s
       restart_policy:
         condition: on-failure
-networks:
-  frontend:
-  backend:
+# networks:
+#   dockerdemo:
